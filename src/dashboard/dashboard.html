@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spin2Time</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="../../node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css">
+  <link rel="stylesheet" type="text/css" href="../../node_modules/bulma-divider/dist/css/bulma-divider.min.css">
+  <link rel="stylesheet" href="../../node_modules/open-iconic/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="dashboardDesign.css">
+  <script src="dashboard.js"></script>
+</head>
+
+<body>
+  <div id = "mainWrapper">
+    <nav class="navbar" role="navigation" id="nav" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" style="cursor: default">
+          <img src="../../img/spin2time_logo_transparent2.png">
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-start">
+        <p class="navbar-item" id="pUserName"></p>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="projectArchive/projectArchive.html">
+            Projektarchiv
+          </a>
+          <a class="navbar-item" id="aProfile">
+            Mein Account
+          </a>
+          <a class="navbar-item" id="aLogOut">
+            Ausloggen
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div id="mainBody" class="is-fullheight">
+      <div class="columns" id="dToolLine">
+        <div class="column is-7">
+          <a class="control has-icons-left" id="aSearch">
+            <input id="iSearch" class="input" type="text" placeholder="Nach Projekt suchen...">
+            <span class="icon is-small is-left">
+              <img src="../../img/search_icon.png" height="12px" width="12px" class="fas fa-search"
+                aria-hidden="true"></img>
+            </span>
+          </a>
+        </div>
+  
+        <div class="column is-4">
+          <a id="bRefresh" class="button">⟳</a>
+          <a id="bProjectCreationWindow" class="button">Projekt erstellen</a>
+        </div>
+      </div>
+  
+      <!-- Displaying projects -->
+      <div id="uProjectList"></div>
+    </div>
+  </div>
+</body>
+
+</html>

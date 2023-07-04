@@ -1,0 +1,32 @@
+#dMain {
+    background: #01B5DD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #01B5DD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #01B5DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#hTitle {
+    color: white;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+img{
+    cursor: default;
+    user-select: none;
+}
+
+#bLogin{
+    font-size: 17px;
+}
+
+#inUsername, #inPassword {
+    border: 0;
+    border-bottom: 2px solid #01B5DD /*linear-gradient(to right, #6dd5ed, #01B5DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    outline: none;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 18px;
+}

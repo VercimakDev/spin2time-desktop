@@ -1,0 +1,6 @@
+node_modules
+*.s2t
+dist-project
+.vscode
+deployment
+.VSCodeCounter

@@ -1,0 +1,22 @@
+#dMain{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#footerMenu{
+    margin-top: 40px;
+}
+#footerMenu a{
+    margin-top: 40px;
+}
+.inCode{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    border-bottom: 3px solid #6495ED;
+    margin: 10px;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+}

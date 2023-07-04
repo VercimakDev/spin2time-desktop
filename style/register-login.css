@@ -1,0 +1,101 @@
+#dMain {
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#48b1bf,#06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#48b1bf,#06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#hTitle {
+    color: white;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+img{
+    cursor: default;
+    user-select: none;
+}
+
+#bRegister, #bLogin, #bResetPassword, #bCancel, #bChange{
+    font-size: 17px;
+}
+
+.blurred {
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+}
+
+.columns.is-vcentered {
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+  }
+
+input:disabled {
+    background: white;
+}
+
+#inUsername::placeholder, #inNewUsername::placeholder {
+    text-transform: capitalize;
+}
+
+#inUsername, #inPassword, #inPasswordConfirm, #inEMail, #inNewUsername, #inNewPassword, #inNewPasswordConfirm{
+    border: 0;
+    border-bottom: 2px solid #01B5DD /*linear-gradient(to right, #6dd5ed, #01B5DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    outline: none;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#inUsername, #inNewUsername {
+    text-transform: lowercase;
+}
+
+.inCode{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    border-bottom: 3px solid #6495ED;
+    margin: 10px;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#dValidationCode input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #6495ED;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/** 
+----------------------------------------------------------------------------------
+--------------------------------           Scrollbar        ----------------------
+----------------------------------------------------------------------------------
+ */
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #05A69F;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #DDD;
+}

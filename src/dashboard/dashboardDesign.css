@@ -1,0 +1,206 @@
+.tItem:hover{
+    cursor: pointer;
+}
+
+.tName{
+    font-size: 20px;
+    font: bold;
+}
+
+#mainBody{
+    background:  darkslategrey;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#mainWrapper {
+    background: darkslategrey;
+
+    height: 100%;
+    width: 100%;
+
+
+}
+
+#bProjectCreationWindow{
+    margin-left: 10px;
+}
+
+#dToolLine{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+html, body {
+    height: 100%;
+  }
+
+
+/** 
+----------------------------------------------------------------------------------
+--------------------------------   ProjectList-Design ------------------------
+----------------------------------------------------------------------------------
+ */
+
+ .columns {
+     margin-top: 0;
+ }
+
+.project-box{
+    margin: 15px;
+
+    background: white;
+
+    border-radius: 5px;
+    min-height: 120px;
+    height: 120px;
+    -webkit-transition: height .3s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: height .3s ease-in-out;
+    
+    box-shadow: 0px 2px 44px 0px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0px 2px 44px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 2px 44px 0px rgba(0,0,0,0.23);
+    
+    cursor: pointer;
+
+    border-bottom: 30px solid #06beb6;
+
+
+    overflow: hidden;
+}
+
+.project-box:hover{
+    height: 350px;
+    border-left: 4px solid #06beb6;
+    border-right: 4px solid #06beb6;
+    border-top: 4px solid #06beb6;
+}
+
+.project-box:hover .info-projectName{
+    font-weight: bold;
+}
+
+.project-box:hover .info-description{
+    display: inline-block;
+}
+
+.project-box:hover .info-right{
+    display: inline;
+}
+
+.project-box-without-desc {
+    max-height: 120px;
+}
+
+.project-box-without-desc:hover {
+    max-height: 120px !important;
+}
+
+.info-right{
+    font-size: 15px;
+
+    /*background: #01B5DD;  /* fallback for old browsers */
+    
+    color: black;
+    padding: 5px;
+}
+
+.info-projectName{
+    margin-top: 5px;
+    font-size: 22px;
+    word-wrap: break-word;
+}
+
+.info-description{
+    width: 80%;
+    font-style: italic;
+    display: none;
+    word-wrap: break-word;
+}
+
+.info-right{
+    display: none;
+}
+
+
+
+/** 
+----------------------------------------------------------------------------------
+--------------------------------           NAV-Bar        ------------------------
+----------------------------------------------------------------------------------
+ */
+
+
+.navbar .navbar-item{
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-burger {
+    color: white;
+}
+
+.navbar-burger:hover {
+    color: white;
+}
+
+
+.is-active .navbar-end .navbar-item {
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#48b1bf,#06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#48b1bf,#06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-menu.is-active {
+    padding: 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.navbar-menu .navbar-end .navbar-item:hover{
+    background: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.is-active .navbar-end .navbar-item:hover{
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#48b1bf,#06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#48b1bf,#06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0;
+    opacity: 0.9;
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#48b1bf,#06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#48b1bf,#06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/** 
+----------------------------------------------------------------------------------
+--------------------------------           Scrollbar        ----------------------
+----------------------------------------------------------------------------------
+ */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #05A69F;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #DDD;
+}

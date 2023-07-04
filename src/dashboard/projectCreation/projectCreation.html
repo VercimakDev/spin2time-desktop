@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/bulma/css/bulma.min.css">
+        <link rel="stylesheet" type="text/css" href="projectCreationDesign.css">
+        <script src="projectCreation.js"></script>
+        <title>Spin2Time - Projekt erstellen</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="column">
+                <h1>Erstelle ein Projekt</h1>
+                <label>Projektname</label>
+                <br>
+                <input id="inProjectName" class="input" size="45" maxlength="45"placeholder="max. 45 Zeichen">
+                <br>
+                <label>Beschreibung (optional)</label>
+                <br>
+                <textarea id="inProjectDescription" class="textarea" size="250" maxlength="250" placeholder="max. 250 Zeichen"></textarea>
+            </div>
+            <div class="column">
+                <button id="bSubmitCreate" class="button">Projekt erstellen</button>
+                <span id="bCancel">Schließen</span>
+            </div>            
+        </div>
+    </body>
+</html>

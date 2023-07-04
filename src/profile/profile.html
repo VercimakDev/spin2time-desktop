@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spin2Time</title>
+  <link rel="stylesheet" type="text/css" href="../../node_modules/bulma-divider/dist/css/bulma-divider.min.css">
+  <link rel="stylesheet" type="text/css" href="../../node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="../../style/register-login.css">
+  <script src="profile.js"></script>
+</head>
+
+<body>
+  <div class="hero is-fullheight" id="dMain">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-2 is-desktop">
+            <a id="back" class="title">← Zurück</a>
+          </div>
+          <div class="column is-5-tablet is-4-desktop is-4-widescreen">
+            <div class="box" id="confirmBox">
+              <div class="field">
+                <input id="inUsername" placeholder="Benutzername" disabled required>
+              </div>
+              <div class="field">
+                <input id="inPassword" type="password" placeholder="Passwort" required>
+              </div>
+              <br>
+              <br>
+              <p>Was möchten Sie ändern?</p>
+              <br>
+              <div class="columns is-centered">
+                <div class="column is-narrow">
+                  <button id="bUsernameChange" class="button">Benutzername</button>
+                </div>
+                <div class="column is-narrow is-divider-vertical" data-content="ODER"></div>
+                <div class="column is-narrow">
+                  <button id="bPasswordChange" class="button">Passwort</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="is-divider-vertical" style="height: 300px;"></div>
+          <div class="column is-5-tablet is-4-desktop is-4-widescreen">
+            <div class="box blurred" id="changeBox">
+              <div class="field">
+                <input id="inNewUsername" placeholder="Neuer Benutzername" disabled>
+              </div>
+              <div class="field">
+                <input id="inNewPassword" type="password" placeholder="Neuer Passwort" disabled>
+              </div>
+              <div class="field">
+                <input id="inNewPasswordConfirm" type="password" placeholder="Neues Passwort bestätigen" disabled>
+              </div>
+              <br>
+              <div class="is-centered has-text-centered">
+                <button id="bCancel" class="button" disabled>Abbrechen</button>              
+                <button id="bChange" class="button" disabled>Ändern</button>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spin2Time</title>
+  <link rel="stylesheet" type="text/css" href="../../../node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="projectArchive.css">
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="header">
+            <h1>Projektarchiv</h1>
+            <a href="../dashboard.html">Zurück zum Dashboard</a>
+        </div>
+        <div id="content">
+            <p>Info: Es werden jene Projekte aufgelistet zu dem Sie den Rang Admin zum Zeitpunkt der Archivierung hatten.</p>
+            <div id="projects">Projekte werden geladen...</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+const $ = require("jquery");
+const s2tDB = require("../../internal/s2tDB");
+const s2tStateParser = require("../../internal/s2tStateParser");
+
+$(document).ready(() => {
+    retrieve();
+});
+
+function retrieve(){
+    createHTMLProjects(listenForUnarchiving);
+}
+
+function createHTMLProjects(callback){
+    s2tStateParser.readState( (data) => {
+        var stmt = 
+            `
+            SELECT p_id, p_name 
+            FROM p_projects
+            INNER JOIN pm_projectmembers 
+            ON p_id = pm_p_id 
+            WHERE p_isArchived = 1 AND pm_u_id = ${data[0]} AND pm_isAdmin = 1
+            
+            `;
+            s2tDB.connect().query(stmt, (err, result) => {
+                if(err){
+                    console.error(err);
+                }else{
+                    var html = ``;
+                    for(project of result){
+                        html += 
+                        `
+                        <div id="${project.p_id}" class="project">
+                            <p class="pID">Projekt mit ID: ${project.p_id}</p>
+                            <p class="projectName">${project.p_name}</p>
+                            <p class="pRessurect">Klicken und wiederherstellen</p>
+                        </div>
+                        
+                        `
+                    }
+                    //Insert HTML projects
+                    $("#projects").after().html(html); 
+                    
+                    //Finished
+                    console.log(`Successfully retrieved projects`);
+                    callback();
+                }
+            });
+    });
+}
+
+function listenForUnarchiving(){
+    $(".project").click((event) => {
+        var id = $(event.currentTarget).attr("id");
+
+        var stmt = 
+        `
+        UPDATE p_projects
+        SET p_isArchived = 0
+        WHERE p_id = ${id};
+        `
+        
+        s2tDB.connect().query(stmt, (err) => {
+            if(err){
+                console.error(`Failed to unarchive project. Stmt:${stmt}.Err:${err}`);
+            }else{
+                console.log(`Succesfully unarchived project with id ${id}`)
+            }
+            retrieve();
+        });
+    });
+}
+
+</script>

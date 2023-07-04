@@ -1,0 +1,27 @@
+body, html {
+    height: 250px;
+    width: 600px;
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#48b1bf,#06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#48b1bf,#06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    font-size: 56px;
+}
+
+img {
+    height: 110px;
+}
+
+#container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
